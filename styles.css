@@ -13,6 +13,8 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto 1fr;
+  padding: 1rem;
+  grid-gap: 1rem;
 }
 
 .flashcard--wrapper {
@@ -20,17 +22,18 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: 100%;
+  grid-gap: 1rem;
 }
 
 header {
   background-color: #f14e32;;
   color: white;
   font-size: 2rem;
+  padding: 1rem;
 }
 
 .card-container {
   position: relative;
-  margin: 10px;
 }
 
 .card {
@@ -66,6 +69,6 @@ header {
   content: "This is checked"
 }
 
-.card p::after {
+.card p::before {
   content: "This is unckecked"
 }
