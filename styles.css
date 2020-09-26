@@ -12,7 +12,9 @@ html, body {
 body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 40px 1fr;
+  grid-template-rows: auto 1fr;
+  padding: 1rem;
+  grid-gap: 1rem;
 }
 
 .flashcard--wrapper {
@@ -20,11 +22,14 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   height: 100%;
+  grid-gap: 1rem;
 }
 
 header {
-  background-color: chartreuse;
-  color: darkolivegreen;
+  background-color: #f14e32;;
+  color: white;
+  font-size: 2rem;
+  padding: 1rem;
 }
 
 .card-container {
@@ -38,6 +43,14 @@ header {
   height: 100%;
   width: 100%;
   z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  color: white;
+  font-size: 2rem;
+  background-color: #0D4B1F;
+  transition: 0.5s;
 }
 
 .toggler {
@@ -49,5 +62,13 @@ header {
 }
 
 .toggler:checked + .card {
-  background-color: red;
+  background-color: #f14e32;;
+}
+
+.toggler:checked + .card p::before {
+  content: "This is checked"
+}
+
+.card p::before {
+  content: "This is unckecked"
 }
